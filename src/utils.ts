@@ -5,7 +5,9 @@ export const fixTimestamp = (timestamp: number | string): number => {
 };
 
 export const timestamp2Date = (target: number | string): Date => {
-    return new Date(fixTimestamp(target));
+    const d = new Date(fixTimestamp(target));
+    d.setTime(d.getTime() + d.getTimezoneOffset() * 60 * 1000 /* convert to UTC */ + (/* UTC+8 */ 8) * 60 * 60 * 1000);
+    return d;
 };
 
 export const timeStringify = (value: number): string => {
