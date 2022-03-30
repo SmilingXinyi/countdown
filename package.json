@@ -33,7 +33,7 @@
         "bracketSpacing": false
     },
     "name": "countdown",
-    "author": "wuhan01",
+    "author": "xinyi",
     "module": "dist/countdown.esm.js",
     "size-limit": [
         {
