@@ -23,7 +23,6 @@ const countdown = (params: CountdownProps) => {
             if (diff > 0) {
                 const diffObj = timeDiffInHours(nowTime, targetTime);
                 if (isEqual(diffObj, latest)) {
-                    console.log(diffObj, latest);
                     latest = diffObj;
                     onUpdate(diffObj);
                 }

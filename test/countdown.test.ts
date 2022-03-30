@@ -71,7 +71,7 @@ describe('The Countdown', () => {
         expect(result).toBe(1648602443000);
     });
 
-    test('countdown to 1648684792353', done => {
+    test('countdown to 4 seconds later', done => {
         const onUpdate = (curr: any) => {
             console.log(curr);
         };
