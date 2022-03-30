@@ -1,3 +1,3 @@
 # Countdown
 
-Countdown function based on requestAnimationFrame
+Countdown function based on *requestAnimationFrame*
