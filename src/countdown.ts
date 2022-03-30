@@ -3,13 +3,10 @@ import {CountdownProps} from './types';
 import isEqual from 'lodash.isequal';
 
 const countdown = (params: CountdownProps) => {
-    const {
-        target,
-        onUpdate,
-        onComplete,
-    } = params;
+    const {target, onUpdate, onComplete} = params;
 
-    let targetDate: Date = target instanceof Date ? target : timestamp2Date(target);
+    let targetDate: Date =
+        target instanceof Date ? target : timestamp2Date(target);
 
     let latest: any;
 

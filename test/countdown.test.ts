@@ -1,5 +1,10 @@
 import countdown, {
-    fixTimestamp, timestamp2Date, timeStringify, timeSpilit, timeDiffInHours, clearMilliseconds
+    fixTimestamp,
+    timestamp2Date,
+    timeStringify,
+    timeSpilit,
+    timeDiffInHours,
+    clearMilliseconds
 } from '../src';
 
 describe('The Countdown', () => {
@@ -77,10 +82,12 @@ describe('The Countdown', () => {
         };
 
         let now = Date.now();
-        let future = now += 1000 * 4;
+        let future = (now += 1000 * 4);
 
         const onComplete = () => {
-            expect(clearMilliseconds(future)).toBe(clearMilliseconds(Date.now()));
+            expect(clearMilliseconds(future)).toBe(
+                clearMilliseconds(Date.now())
+            );
             done();
         };
 
@@ -89,6 +96,5 @@ describe('The Countdown', () => {
             onUpdate,
             onComplete
         });
-
     });
 });

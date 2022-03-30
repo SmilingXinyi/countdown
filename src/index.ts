@@ -1,2 +1,2 @@
-export {default as default}  from './countdown';
+export {default} from './countdown';
 export * from './utils';

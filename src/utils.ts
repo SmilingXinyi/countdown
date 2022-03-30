@@ -2,7 +2,7 @@ import {DateValue, SimpleDate} from './types';
 
 export const fixTimestamp = (timestamp: number | string): number => {
     return parseInt(timestamp.toString().padEnd(13, '0'), 10);
-}
+};
 
 export const timestamp2Date = (target: number | string): Date => {
     return new Date(fixTimestamp(target));
@@ -12,7 +12,10 @@ export const timeStringify = (value: number): string => {
     return value.toString().padStart(2, '0');
 };
 
-export const timeSpilit = (value: number | string, stringify: boolean = false): SimpleDate => {
+export const timeSpilit = (
+    value: number | string,
+    stringify: boolean = false
+): SimpleDate => {
     const d = timestamp2Date(value);
     let year: number | string = d.getFullYear();
     let month: number | string = d.getMonth() + 1;
@@ -29,11 +32,19 @@ export const timeSpilit = (value: number | string, stringify: boolean = false): 
         second = timeStringify(second);
     }
     return {
-        year, month, date, hour, minute, second
+        year,
+        month,
+        date,
+        hour,
+        minute,
+        second
     };
 };
 
-export const timeDiffInHours = (start: number | string, end: number | string): SimpleDate => {
+export const timeDiffInHours = (
+    start: number | string,
+    end: number | string
+): SimpleDate => {
     const startDate = timestamp2Date(start);
     const endDate = timestamp2Date(end);
     const diff = endDate.getTime() - startDate.getTime();
@@ -51,5 +62,5 @@ export const timeDiffInHours = (start: number | string, end: number | string): S
 };
 
 export const clearMilliseconds = (timestamp: number | string): number => {
-    return fixTimestamp(timestamp) - fixTimestamp(timestamp) % 1000;
+    return fixTimestamp(timestamp) - (fixTimestamp(timestamp) % 1000);
 };
