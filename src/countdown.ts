@@ -25,7 +25,7 @@ const countdown = (params: CountdownProps) => {
         raf(() => {
             if (diff > 0) {
                 const diffObj = timeDiffInHours(nowTime, targetTime);
-                if (isEqual(diffObj, latest)) {
+                if (!isEqual(diffObj, latest)) {
                     latest = diffObj;
                     onUpdate(diffObj);
                 }
