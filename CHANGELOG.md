@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/SmilingXinyi/countdown/compare/v1.0.9...v1.1.0) (2022-03-31)
+
+
 ### Features
 
 * 🎸 requestAnimationFrame polifill ([9a27844](https://github.com/SmilingXinyi/countdown/commit/9a27844b071f97c9b0fc1197454223cc06172fae))
