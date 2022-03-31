@@ -32,7 +32,7 @@
         "trailingComma": "none",
         "bracketSpacing": false
     },
-    "name": "countdown-serive",
+    "name": "countdown-service",
     "author": "xinyi",
     "module": "dist/countdown.esm.js",
     "size-limit": [
