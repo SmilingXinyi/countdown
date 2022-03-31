@@ -32,7 +32,7 @@
         "trailingComma": "none",
         "bracketSpacing": false
     },
-    "name": "countdown",
+    "name": "countdown-lib",
     "author": "xinyi",
     "module": "dist/countdown.esm.js",
     "size-limit": [
