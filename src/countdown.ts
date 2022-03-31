@@ -10,13 +10,19 @@ const countdown = (params: CountdownProps) => {
 
     let latest: any;
 
+    let raf = requestAnimationFrame || params.options?.requestAnimationFrame;
+
     const update = () => {
         const now = new Date();
         const targetTime = targetDate.getTime();
         const nowTime = now.getTime();
         const diff = targetTime - nowTime;
 
-        requestAnimationFrame(() => {
+        if (!raf) {
+            throw new Error('requestAnimationFrame is not defined');
+        }
+
+        raf(() => {
             if (diff > 0) {
                 const diffObj = timeDiffInHours(nowTime, targetTime);
                 if (isEqual(diffObj, latest)) {
