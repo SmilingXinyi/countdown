@@ -1,5 +1,5 @@
 export type CountdownOptions = {
-    requestAnimationFrame?: Function
+    requestAnimationFrame?: Function;
 };
 
 export type CountdownProps = {
